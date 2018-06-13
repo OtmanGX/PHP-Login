@@ -9,6 +9,7 @@ $(document)
 		email: $("input[type='email']", _form).val(),
 		password: $("input[type='password']", _form).val()
 	};
+	
 
 	if(dataObj.email.length < 6) {
 		_error
