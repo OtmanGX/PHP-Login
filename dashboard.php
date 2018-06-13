@@ -5,7 +5,10 @@
 	// Require the config
 	require_once "inc/config.php"; 
 
+	ForceLogin();
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,21 +19,14 @@
 
     <title>Page Title</title>
 
-    <base href="/php_login_course/" />
+    <base href="/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
   </head>
 
   <body>
 
   	<div class="uk-section uk-container">
-  		<?php 
-  			echo "Hello world. Today is: ";
-  			echo date("Y m d");
-  		?> 
-  		<p>
-  			<a href="/login.php">Login</a>
-  			<a href="/register.php">Register</a>
-  		</p>
+  		Dashboard here; you are signed in as user: <?php echo $_SESSION['user_id']; ?>
   	</div>
 
   	<?php require_once "inc/footer.php"; ?> 
